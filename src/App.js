@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PersonalData from './PersonalData';
+import PersonalDataList from './PersonalDataList';
 
 const serverData = [
   {
@@ -29,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <PersonalDataList>
         {serverData.map((contact, index) =>
           <PersonalData
             key={index}
@@ -38,7 +39,7 @@ class App extends React.Component {
             fav={contact.fav}
             group={contact.group} />
         )}
-      </div>
+      </PersonalDataList>
     );
   }
 }
